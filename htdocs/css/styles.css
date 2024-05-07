@@ -1,0 +1,216 @@
+.icon {
+    fill: var(--icon-color, black);
+    /* Establece el color predeterminado del icono */
+}
+
+/* Media query para tema claro */
+@media (prefers-color-scheme: light) {
+    :root {
+        --icon-color: black;
+        /* Cambia el color del icono para el tema claro */
+    }
+}
+
+/* Media query para tema oscuro */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --icon-color: white;
+        /* Cambia el color del icono para el tema oscuro */
+    }
+}
+
+
+body {
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 18px;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+.container {
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 18px;
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    align-items: center;
+    align-content: center;
+}
+
+.container h2 {
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 34px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    /* margin-bottom: 40px; */
+}
+
+.container h1 {
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 38px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    /* margin-bottom: 40px; */
+}
+
+.container input {
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 3px;
+    margin-top: 7px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.container .generarClave {
+    font-size: 24px;
+    width: 250px;
+
+}
+
+.container button {
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 18px;
+    width: 100%;
+    padding: 10px;
+    margin-top: 17px;
+    margin-bottom: 5;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.container button:hover {
+    background-color: #0056b3;
+}
+
+.link {
+    margin-top: 25px;
+}
+
+.link a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.link a:hover {
+    color: #0056b3;
+}
+
+.error {
+    color: #d30000;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.success {
+    color: green;
+    padding-bottom: 15px;
+}
+
+.keys {
+    display: flex;
+}
+
+.boxes {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+
+label {
+    display: block;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    margin-right: 10px;
+    margin-left: 10px;
+    align-items: center;
+}
+
+.key {
+    font-family: "Fira Code", monospace;
+    font-optical-sizing: auto;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+    margin: 18px;
+    resize: none;
+}
+
+.cerrarSesion {
+    width: 200px;
+    height: 43px;
+    justify-content: left;
+    align-items: left;
+    margin-bottom: 17px;
+}
+
+.llaveLabels {
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+.chicos {
+    font-family: "Fira Code", monospace;
+    font-optical-sizing: auto;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+    margin: 18px;
+    width: 450px;
+    resize: none;
+}
+
+.container .boxes .box .botonAccion {
+    width: 200px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    margin-top: 5px;
+
+}
+
+.container .boxes .box .labelsFinal {
+    font-size: 18px;
+
+}

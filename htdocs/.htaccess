@@ -1,0 +1,38 @@
+
+php_value mbstring.http_input auto
+php_value date.timezone America/Hermosillo
+RewriteEngine On
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP:CF-Visitor} !{"scheme":"https"}
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Configuración para la reescritura de URL
+RewriteBase /
+
+# Redirigir www.example.com a example.com
+RewriteCond %{HTTP_HOST} ^www\.example\.com [NC]
+RewriteRule ^(.*)$ http://example.com/$1 [L,R=301]
+
+# Proteger el archivo .htaccess
+<Files .htaccess>
+    Require all denied
+</Files>
+
+# Configurar encabezados HTTP para mayor seguridad
+<IfModule mod_headers.c>
+    Header set X-XSS-Protection "1; mode=block"
+    Header always append X-Frame-Options SAMEORIGIN
+    Header set X-Content-Type-Options nosniff
+</IfModule>
+
+# Evitar que se muestren listados de directorios
+Options -Indexes
+
+# Desactivar la exposición de la versión de Apache
+ServerSignature Off
+
+# Configuración adicional de PHP
+# php_value display_errors Off
+php_value upload_max_filesize 20M
+php_value post_max_size 20M
